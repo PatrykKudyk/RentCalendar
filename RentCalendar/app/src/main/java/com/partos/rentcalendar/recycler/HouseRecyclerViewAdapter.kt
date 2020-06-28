@@ -9,7 +9,8 @@ import com.partos.rentcalendar.R
 class HouseRecyclerViewAdapter() : RecyclerView.Adapter<HouseViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val rowCell = layoutInflater.inflate(R.layout.cell_month_july, parent, false)
+        val rowCell = layoutInflater.inflate(R.layout.cell_month, parent, false)
+        return HouseViewHolder(rowCell)
     }
 
     override fun getItemCount(): Int {

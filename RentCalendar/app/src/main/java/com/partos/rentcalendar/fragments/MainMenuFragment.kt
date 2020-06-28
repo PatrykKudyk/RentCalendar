@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import androidx.viewpager.widget.PagerAdapter
 import com.partos.rentcalendar.R
+import com.partos.rentcalendar.pager.HousesViewPagerAdapter
+import kotlinx.android.synthetic.main.fragment_main_menu.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -83,6 +85,8 @@ class MainMenuFragment : Fragment() {
     }
 
     private fun initFragment() {
-
+        var adapter: PagerAdapter = HousesViewPagerAdapter(rootView.context)
+        val housesViewPager = rootView.houses_view_pager
+        housesViewPager.adapter = adapter
     }
 }

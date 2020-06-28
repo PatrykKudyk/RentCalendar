@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
 import com.partos.rentcalendar.R
+import com.partos.rentcalendar.db.DataBaseHelper
 import com.partos.rentcalendar.pager.HousesViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_main_menu.view.*
 
@@ -85,6 +86,12 @@ class MainMenuFragment : Fragment() {
     }
 
     private fun initFragment() {
+        val dbHelper = DataBaseHelper(rootView.context)
+        val days = dbHelper.getSmallList()
+        if (days.size == 0){
+            dbHelper.createDays()
+        }
+
         var adapter: PagerAdapter = HousesViewPagerAdapter(rootView.context)
         val housesViewPager = rootView.houses_view_pager
         housesViewPager.adapter = adapter

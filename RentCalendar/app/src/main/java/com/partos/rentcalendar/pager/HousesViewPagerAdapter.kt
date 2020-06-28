@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
 import com.partos.rentcalendar.R
+import com.partos.rentcalendar.recycler.HouseRecyclerViewAdapter
 import com.partos.rentcalendar.recycler.MarginItemDecoration
 import kotlinx.android.synthetic.main.view_pager_cell.view.*
 
@@ -50,6 +51,8 @@ class HousesViewPagerAdapter : PagerAdapter {
                 12
             )
         )
+
+        recyclerView.adapter = HouseRecyclerViewAdapter()
 
         container!!.addView(view)
 

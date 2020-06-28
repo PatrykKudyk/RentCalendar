@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.partos.rentcalendar.R
+import kotlinx.android.synthetic.main.cell_month.view.*
 
 class HouseRecyclerViewAdapter() : RecyclerView.Adapter<HouseViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseViewHolder {
@@ -19,24 +20,24 @@ class HouseRecyclerViewAdapter() : RecyclerView.Adapter<HouseViewHolder>() {
 
     override fun onBindViewHolder(holder: HouseViewHolder, position: Int) {
         if (position == 0) {
-            handleJuly()
+            handleJuly(holder, position)
         } else if (position == 1) {
-            handleAugust()
+            handleAugust(holder, position)
         } else if (position == 2) {
-            handleSeptember()
+            handleSeptember(holder, position)
         }
     }
 
-    private fun handleJuly() {
-
+    private fun handleJuly(holder: HouseViewHolder, position: Int) {
+        holder.view.cell_month_text_name.text = holder.view.context.getString(R.string.july)
     }
 
-    private fun handleAugust() {
-
+    private fun handleAugust(holder: HouseViewHolder, position: Int) {
+        holder.view.cell_month_text_name.text = holder.view.context.getString(R.string.august)
     }
 
-    private fun handleSeptember() {
-
+    private fun handleSeptember(holder: HouseViewHolder, position: Int) {
+        holder.view.cell_month_text_name.text = holder.view.context.getString(R.string.september)
     }
 
 }

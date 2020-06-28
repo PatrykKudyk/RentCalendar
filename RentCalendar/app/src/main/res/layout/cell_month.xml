@@ -13,11 +13,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/cell_month_text_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:textSize="30dip"
-            android:text="@string/july"
             android:fontFamily="@font/josefinsansbold"/>
         
         <View

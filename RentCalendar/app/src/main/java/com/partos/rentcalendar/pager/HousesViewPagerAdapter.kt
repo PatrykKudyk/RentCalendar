@@ -22,7 +22,8 @@ import kotlinx.android.synthetic.main.view_pager_cell.view.*
 class HousesViewPagerAdapter : PagerAdapter {
 
     var context: Context
-//    var recyclerViews: Array<RecyclerView>
+
+    //    var recyclerViews: Array<RecyclerView>
     lateinit var inflater: LayoutInflater
 
     constructor(context: Context) : super() {
@@ -31,7 +32,7 @@ class HousesViewPagerAdapter : PagerAdapter {
     }
 
 
-//    override fun getCount(): Int = recyclerViews.size
+    //    override fun getCount(): Int = recyclerViews.size
     override fun getCount(): Int = 2
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean =
@@ -52,7 +53,11 @@ class HousesViewPagerAdapter : PagerAdapter {
             )
         )
 
-        recyclerView.adapter = HouseRecyclerViewAdapter()
+        if (position == 0) {
+            recyclerView.adapter = HouseRecyclerViewAdapter(false)
+        } else if (position == 1){
+            recyclerView.adapter = HouseRecyclerViewAdapter(true)
+        }
 
         container!!.addView(view)
 

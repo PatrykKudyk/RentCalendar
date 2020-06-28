@@ -10,4 +10,6 @@
     <string name="friday">Pt</string>
     <string name="saturday">Sob</string>
     <string name="sunday">Ndz</string>
+    <string name="house_small">\t40/5</string>
+    <string name="house_big">\t47</string>
 </resources>

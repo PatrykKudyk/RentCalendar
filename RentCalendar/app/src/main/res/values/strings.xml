@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Rent Calendar</string>
+    <string name="july">Lipiec</string>
+    <string name="august">Sierpień</string>
+    <string name="september">Wrzesień</string>
+    <string name="monday">Pon</string>
+    <string name="tuesday">Wt</string>
+    <string name="wednesday">Śr</string>
+    <string name="thursday">Czw</string>
+    <string name="friday">Pt</string>
+    <string name="saturday">Sob</string>
+    <string name="sunday">Ndz</string>
+    <string name="house_small">\t40/5</string>
+    <string name="house_big">\t47</string>
 </resources>

@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Rent Calendar</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="july">Lipiec</string>
+    <string name="august">Sierpień</string>
+    <string name="september">Wrzesień</string>
+    <string name="monday">Pon</string>
+    <string name="tuesday">Wt</string>
+    <string name="wednesday">Śr</string>
+    <string name="thursday">Czw</string>
+    <string name="friday">Pt</string>
+    <string name="saturday">Sob</string>
+    <string name="sunday">Ndz</string>
 </resources>
